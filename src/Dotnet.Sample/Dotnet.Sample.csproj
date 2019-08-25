@@ -6,6 +6,8 @@
     <ProjectReference Include="../libs/AppOps/AppOps.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="3.1.0" />
+    <PackageReference Include="Amazon.Lambda.RuntimeSupport" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
     <PackageReference Include="Serilog.Exceptions" Version="5.3.1" />
