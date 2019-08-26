@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  update-alb:
+  update-lambda:
     docker:
       - image: 651179183771.dkr.ecr.us-east-2.amazonaws.com/cicd/aws-base
         aws_auth:
@@ -13,6 +13,7 @@ jobs:
           command: dotnet tool install -g Amazon.Lambda.Tools
       - run:
           name: Create lambda package
+          command: dotnet lambda package -pl ./src/Dotnet.Sample
       - run:
           name: Stack up
           command: stackit up --stack-name platformperf --template ./app.yml
@@ -20,7 +21,7 @@ workflows:
   version: 2
   deploy:
     jobs:
-      - update-alb:
+      - update-lambda:
           context: 10kgDevTest
           filters:
             branches:
