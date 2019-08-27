@@ -3,6 +3,11 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="bootstrap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>  
+  <ItemGroup>
     <ProjectReference Include="../libs/AppOps/AppOps.csproj" />
   </ItemGroup>
   <ItemGroup>
