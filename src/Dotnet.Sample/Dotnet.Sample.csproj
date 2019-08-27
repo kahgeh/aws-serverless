@@ -2,6 +2,9 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetLambda)' == 'true'">
+    <StartupObject>Dotnet.Sample.Lambda</StartupObject>
+  </PropertyGroup>  
   <ItemGroup>
     <Content Include="bootstrap">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
