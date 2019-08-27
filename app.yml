@@ -1,5 +1,8 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Parameters:
+  Name:
+    Type: String
+    Default: platformperf
   Subnets:
     Type: AWS::SSM::Parameter::Value<List<AWS::EC2::Subnet::Id>>
     Default: /global/subnets
