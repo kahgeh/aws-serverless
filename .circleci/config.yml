@@ -15,7 +15,7 @@ jobs:
             dotnet tool update -g Amazon.Lambda.Tools
       - run:
           name: Create lambda package
-          command: ~/.dotnet/tools/dotnet-lambda package -pl ./src/Dotnet.Sample/Dotnet.Sample.csproj
+          command: ~/.dotnet/tools/dotnet-lambda package -pl ./src/Dotnet.Sample
       - run:
           name: Stack up
           command: stackit up --stack-name platformperf --template ./app.yml
