@@ -33,7 +33,7 @@ Resources:
       Runtime: provided
       Role: !GetAtt Role.Arn
       MemorySize: 256
-      CodeUri: ../src/Dotnet.Sample/bin/Release/netcoreapp2.2/Dotnet.Sample.zip
+      CodeUri: src/Dotnet.Sample/bin/Release/netcoreapp2.2/Dotnet.Sample.zip
       Timeout: 60
       AutoPublishAlias: live
       DeploymentPreference:
