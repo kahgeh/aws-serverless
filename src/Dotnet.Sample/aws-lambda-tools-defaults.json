@@ -1,0 +1,3 @@
+﻿{
+  "msbuild-parameters": "/p:RuntimeIdentifier=rhel.7.2-x64 /p:TargetLambda=true /p:SelfContained=true"
+}
