@@ -9,6 +9,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install Lambda Packaging Tool
+          command: |
+            dotnet tool install --global Amazon.Lambda.Tools --version 3.1.1
+            dotnet tool update -g Amazon.Lambda.Tools
+      - run:
           name: Create lambda package
           command: dotnet lambda package -pl ./src/Dotnet.Sample
       - run:
