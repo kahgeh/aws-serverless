@@ -47,9 +47,6 @@ Resources:
         SubnetIds: !Ref Subnets
       Tags:
         env: devtest
-      Environment:
-        Variables:
-          Serilog__WriteTo__0__Args__formatter: Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact
   Role:
     Type: AWS::IAM::Role
     Properties:
