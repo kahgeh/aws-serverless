@@ -41,10 +41,6 @@ Resources:
       AutoPublishAlias: live
       DeploymentPreference:
         Type: AllAtOnce
-      VpcConfig:
-        SecurityGroupIds:
-          - !Ref SecurityGroup
-        SubnetIds: !Ref Subnets
       Tags:
         env: devtest
   Role:
